@@ -1,0 +1,164 @@
+#banner {
+    > .banner-secundario {
+        > #banner-sobre {
+            box-shadow: 0 0 5px $orange_pattern;
+        }
+    }
+}
+
+#equipe {
+    margin-bottom: 12%;
+
+    > #equipe-conteudo {
+        justify-content: left;
+        > #texto-paginas-secundarias {
+            @include make-col-ready();
+            @include media-breakpoint-up(md){
+                @include make-col(6);
+                
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 6%;
+            }
+        }
+
+        > img {
+            @include make-col-offset(1);
+            height: 300px;
+            border: solid 1px;
+            margin-left: 14.7%;
+        }
+    }
+}
+
+#triade-conteudo {
+    height: auto;
+    width: 100%;
+    background: linear-gradient(45deg, $orange_pattern, $orange_select);
+    box-shadow: 0 0 5px $orange_pattern;
+    > #missao {
+        > .row {
+            position: relative;
+            > span {
+                display: inline-block;
+                position: absolute;
+                @extend .sprite_triade;
+                &.missao-icon{
+                    top: 50%;
+                    left: -5%;
+                    transform: translate(40%, -44%);
+                    @include sprite-define(168px, 156px, -6px, -5px);
+                }
+            }
+            > p {
+                @include make-col-ready();
+                @include media-breakpoint-up(md){
+                    @include make-col(9);
+                    @include make-col-offset(3);
+                    
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 5%;
+                }
+            }
+        }
+    }
+
+    > #valores {
+        > .row {
+            position: relative;
+            > .texto-triade{
+                @include make-col-ready();
+                @include media-breakpoint-up(md){
+                    @include make-col(4);
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 5%;
+                }
+            }
+
+            > span {
+                display: inline-block;
+                position: absolute;
+                @extend .sprite_triade;
+                &.valores-icon{
+                    top: 50%;
+                    transform: translate(0%, -44%);
+                    @include sprite-define(162px, 173px, -5px, -172px);
+                }
+            }
+            
+            > #texto-triade2{
+                    @include make-col-offset(4);
+                    @include make-col(4);
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 5%;
+            }
+        }
+    }
+
+    > #visao {
+        padding-bottom: 9%;
+        > h3 {
+            padding-top: 7%;
+        }
+        > .row {
+            position: relative;
+            > p {
+                @include make-col-ready();
+                @include media-breakpoint-up(md){
+                    @include make-col(9);
+                    
+                    left: -12.5%;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 5%;
+                    margin-bottom: 0;
+                }
+            }
+
+            > span {
+                @include make-col-offset(3);
+                display: inline-block;
+                position: absolute;
+                @extend .sprite_triade;
+                &.visao-icon{
+                    top: 50%;
+                    transform: translate(118%, -44%);
+                    @include sprite-define(168px, 100px, -6px, -356px);
+                }
+            }
+        }
+    }
+
+    .titulo-triade{
+        padding-top: 10%;
+        text-align: center;
+        font-size: 20pt;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo-triade{
+        text-align: justify;
+        font-size: 16pt;
+        color: white;
+        padding: 0;
+    }
+
+    .texto-triade {
+        color: white;
+        font-size: 15pt;
+        text-align: justify;
+    }
+}
+
+#mej {
+    > .row {
+        > p {
+            margin-bottom: 10%;
+        }
+    }
+}

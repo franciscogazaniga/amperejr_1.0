@@ -1,0 +1,157 @@
+#servicos {
+    margin-bottom: 37px;
+
+    @media (max-width: 992px){
+        margin-bottom: 25px;
+    }
+    
+    > #servicos_categorias {
+        > #servicos_categoria_1 {
+            @include make-col-ready();
+            @include media-breakpoint-up(md){
+                @include make-col(2);
+                padding-left: 0;
+                padding-right: 0;
+            }
+            > #servico-circle {
+                position: relative;
+                @media (max-width: 991px){
+                    width: 150px;
+                    height: 150px;
+                }
+    
+                @media (max-width: 767px){
+                    width: 120px;
+                    height: 120px;
+                }
+    
+                @media (max-width: 610px){
+                    display: block;
+                    left: 50%;
+                    margin-bottom: 60px;
+                    transform: translateX(-50%);
+                }
+
+                > .estudo {
+                    display: inline-block;
+                    position: absolute;
+                    @extend .sprite_servicos;
+                    &.estudo{
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        @include sprite-define(122px, 88px, -3px, -5px);
+                    }
+                    
+                    @media (max-width: 991px){
+                        zoom: 0.8;
+                    }
+            
+                    @media (max-width: 767px){
+                        zoom: 0.65;
+                    }
+                }
+            }
+        }
+
+        > #servicos_categoria_2 {
+            @include make-col-offset(2);
+            @include make-col(2);
+
+            @media (max-width: 610px){
+                margin: 0;
+                margin-bottom: 60px;
+            }
+            > #servico-circle {
+                position: relative;
+                > .projeto {
+                    display: inline-block;
+                    position: absolute;
+                    @extend .sprite_servicos;
+                    &.projeto{
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-32%, -50%);
+                        @include sprite-define(126px, 116px, -5px, -217px);
+                    }    
+    
+                    @media (max-width: 991px){
+                        zoom: 0.8;
+                    }
+    
+                    @media (max-width: 767px){
+                        zoom: 0.65;
+                    }
+                }
+            }
+
+        }
+
+        > #servicos_categoria_3 {
+            @include make-col-offset(2);
+            @include make-col(2);
+            
+            @media (max-width: 610px){
+                margin: 0;
+            }
+
+            > #servico-circle {
+                position: relative;
+                > .eficiencia {
+                    display: inline-block;
+                    position: absolute;
+                    @extend .sprite_servicos;
+                    &.eficiencia{
+                        top: 55%;
+                        left: 50%;
+                        transform: translate(-49%, -50%);
+                        @include sprite-define(126px, 106px, -4px, -103px);
+                    }
+                    
+                    @media (max-width: 991px){
+                        zoom: 0.8;
+                    }
+    
+                    @media (max-width: 767px){
+                        zoom: 0.65;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#servico-circle{
+    display: block;
+    border-radius: 50%;
+    background-color: $orange_pattern;
+    background: linear-gradient(45deg, $orange_pattern, $orange_select);
+    text-decoration: none;
+    text-align: center;
+    width: 185px;
+    height: 185px;
+    &:hover{
+        box-shadow: 0 0 10px $orange_pattern;
+        background: linear-gradient(45deg, #e96f1e, #f5c904);
+    }
+}
+
+h3 {
+    margin-left: 13%;
+    margin-top: 5%;
+    width: fit-content;
+    //margin: 0;
+
+    @media (max-width: 991px){
+        font-size: 12pt;
+    }
+
+    @media (max-width: 767px){
+        font-size: 10pt;
+    }
+
+    @media (max-width: 610px){
+        margin-top: 0;
+        padding-top: 105%; 
+    }
+}

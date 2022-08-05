@@ -1,0 +1,97 @@
+#banner {
+    > .banner-principal {
+        position: relative;
+        padding-top: 60px;
+        width: 100%;
+        > img {
+            display: block;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 0 5px $heading_color;
+        }
+
+        > .inner-principal {
+            @media (max-width: 537px){
+                top: 65%;
+            }
+            > .row {
+                > h1 {
+                    margin-top: 5%;
+                    margin-bottom: 4%;
+                    padding: 0 26%;
+
+                    @media (max-width: 1200px){
+                        font-size: 20pt;
+                        margin-bottom: 3%;
+                        margin-top: 6%;
+                    }
+
+                    @media (max-width: 991px){
+                        font-size: 17pt;
+                        margin-bottom: 1%;
+                        margin-top: 8%;
+                        padding: 0 21%;
+                    }
+
+                    @media (max-width: 767px){
+                        margin-top: 10%;
+                        padding: 0 4%;
+                    }
+
+                    @media (max-width: 610px){
+                        display: none;
+                    }
+                }
+
+                > .btn {
+                    @media (max-width: 610px){
+                        margin-top: 11%;
+                    }
+
+                    @media (max-width: 537px){
+                        margin-top: 4%;
+                    }
+                }
+            }
+        }
+    }
+
+    > .banner-secundario {
+        position: relative;
+        padding-top: 60px;
+        width: 100%;
+        > img {
+            display: block;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 0 5px $heading_color;
+        }
+        > .inner-principal {
+            text-transform: uppercase;
+            > .row {
+                > h1 {
+                    margin-top: 10%;
+                    margin-bottom: 4%;
+                    padding: 0 25%;
+                    
+                }
+            }
+        }
+    }
+
+    .inner-principal {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%)  translateY(-50%);
+        > .row {
+            > h1 {
+                font: bold 23pt $font_main;
+                color: white;
+            }
+        }
+    }
+}

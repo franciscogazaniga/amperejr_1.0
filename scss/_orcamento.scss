@@ -1,0 +1,375 @@
+#orcamento {
+    position: relative;
+    h3 {
+        text-align: center;
+        > a {
+            text-decoration: none;
+            color: $orange_pattern;
+        }
+    }
+    > .form {
+        //position: absolute;
+        width: 50%;
+        left: 0;
+        transform: translateX(50%);
+
+        @media (max-width: 991px){
+            width: 60%;
+            transform: translateX(32%);
+        }
+
+        @media (max-width: 767px){
+            width: 70%;
+            transform: translateX(22%);
+        }
+
+        > .name-form {
+            width: 100%;
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+            > input {
+                width: 100%;
+                height: 100%;
+                color: $heading_color;
+                padding-top: 20px;
+                border: none;
+                outline: none;
+            }
+            > label {
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                border-bottom: 1px solid $heading_color;
+            }
+            > label::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid $orange_pattern;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .content-name {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .name-form input:focus + .label-name .content-name, 
+        .name-form input:valid + .label-name .content-name {
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: $orange_pattern;
+        }
+
+        .name-form input:focus + .label-name::after,
+        .name-form input:valid + .label-name::after {
+            transform: translateX(0%);
+        }
+
+        > .email-form {
+            width: 100%;
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+            > input {
+                width: 100%;
+                height: 100%;
+                color: $heading_color;
+                padding-top: 20px;
+                border: none;
+                outline: none;
+            }
+            > label {
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                border-bottom: 1px solid $heading_color;
+            }
+            > label::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid $orange_pattern;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+        }
+        
+        .content-email {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .email-form input:focus + .label-email .content-email, 
+        .email-form input:valid + .label-email .content-email {
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: $orange_pattern;
+        }
+
+        .email-form input:focus + .label-email::after,
+        .email-form input:valid + .label-email::after {
+            transform: translateX(0%);
+        }
+
+        > .phone-form {
+            width: 100%;
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+            > input {
+                width: 100%;
+                height: 100%;
+                color: $heading_color;
+                padding-top: 20px;
+                border: none;
+                outline: none;
+            }
+            > label {
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                border-bottom: 1px solid $heading_color;
+            }
+            > label::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid $orange_pattern;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+        }
+        
+        .content-phone {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .phone-form input:focus + .label-phone .content-phone, 
+        .phone-form input:valid + .label-phone .content-phone {
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: $orange_pattern;
+        }
+
+        .phone-form input:focus + .label-phone::after,
+        .phone-form input:valid + .label-phone::after {
+            transform: translateX(0%);
+        }
+
+        > .hour-form {
+            width: 100%;
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+            > select {
+                width: 100%;
+                height: 100%;
+                color: $heading_color;
+                padding-top: 20px;
+                border: none;
+                outline: none;
+                //display: none;
+            }
+            > label {
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                border-bottom: 1px solid $heading_color;
+            }
+            > label::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid $orange_pattern;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .content-hour {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hour-form select:focus + .label-hour .content-hour, 
+        .hour-form select:valid + .label-hour .content-hour {
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: $heading_color;
+        }
+
+        /*
+        .hour-form select:focus + .label-hour::after,
+        .hour-form select:valid + .label-hour::after {
+            transform: translateX(0%);
+        }*/
+
+        > .find-form {
+            width: 100%;
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+            > select {
+                width: 100%;
+                height: 100%;
+                padding-top: 20px;
+                border: none;
+                outline: none;
+                //display: none;
+            }
+            > label {
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                border-bottom: 1px solid $heading_color;
+            }
+            > label::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid $orange_pattern;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .content-find {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .find-form select:focus + .label-find .content-find, 
+        .find-form select:valid + .label-find .content-find {
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: $heading_color;
+        }
+
+        /*
+        .find-form select:focus + .label-find::after,
+        .find-form select:valid + .label-find::after {
+            transform: translateX(0%);
+        }*/
+
+        > .subject-form {
+            width: 100%;
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+            > input {
+                width: 100%;
+                height: 100%;
+                color: $heading_color;
+                padding-top: 20px;
+                border: none;
+                outline: none;
+            }
+            > label {
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                border-bottom: 1px solid $heading_color;
+            }
+            > label::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid $orange_pattern;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+        }
+        
+        .content-subject {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .subject-form input:focus + .label-subject .content-subject, 
+        .subject-form input:valid + .label-subject .content-subject {
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: $orange_pattern;
+        }
+
+        .subject-form input:focus + .label-subject::after,
+        .subject-form input:valid + .label-subject::after {
+            transform: translateX(0%);
+        }
+
+        > .message-form {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            > textarea {
+                width: 100%;
+                height: 190px;
+                color: $heading_color;
+                outline: none;
+                border: 1px solid $heading_color;
+                margin-top: 20px;
+                resize: none;
+            }
+        }
+        > .btn {
+            position: relative;
+            left: 50%;
+            margin-top: 1%;
+            transform: translateX(-50%);
+            margin-bottom: 12%;
+        }
+    }
+}

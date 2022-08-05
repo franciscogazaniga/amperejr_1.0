@@ -1,0 +1,111 @@
+a{
+    outline: none;
+    img {
+        border: none;
+    }
+}
+
+.btn {
+    font: 15pt $font_text;
+    text-transform: uppercase;
+    background: $orange_pattern;
+    color: white;
+    &:hover{
+        color: white;
+        background: $orange_select;
+        box-shadow: 0 0 10px $orange_pattern;
+    }
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+    > .row {
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        > h2.heading{
+            color: $heading_color;
+            font: bold 20pt $font_main;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10%;
+            margin-bottom: 10%;
+
+            @media (max-width: 767px){
+                font-size: 18pt;
+                padding: 0 3%;
+            }
+
+            @media (max-width: 575px){
+                font-size: 16pt;
+            }
+        }
+
+        h4 {
+            color: white;
+            font: bold 14pt $font_text;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+h3 {
+    color: $heading_color;
+    font: bold 14pt $font_main;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+
+    @media (max-width: 767px){
+        font-size: 10pt;
+        padding: 0 3%;
+    }
+}
+
+#titulo-paginas-secundarias {
+    justify-content: left;
+    > h2 {
+        margin-bottom: 5%;
+    }
+}
+
+#texto-paginas-secundarias {
+    justify-content: left;
+    > p {
+        text-align: justify;
+    }
+}
+
+.line {
+    margin-top: 3%;
+    width: 50px;
+    height: 3px;;
+    background-color: $orange_pattern;
+}
+
+.sprite_servicos {
+    background-image: url('../imagens/servicos.png');
+    background-repeat: no-repeat;
+}
+
+.sprite_midias {
+    background-image: url('../imagens/redes-sociais.png');
+    background-repeat: no-repeat;
+}
+
+.sprite_midias_select {
+    background-image: url('../imagens/redes-sociais-select.png');
+    background-repeat: no-repeat;
+}
+
+.sprite_contato{
+    background-image: url('../imagens/contato.png');
+    background-repeat: no-repeat;
+}
+
+.sprite_triade {
+    background-image: url('../imagens/triade-icons.png');
+    background-repeat: no-repeat;
+}

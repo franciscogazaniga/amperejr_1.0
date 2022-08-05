@@ -1,0 +1,356 @@
+body{
+    overflow-x: hidden;
+    width: 100%;
+    > header {
+        background: $heading_color;
+        box-shadow: 0 0 5px $heading_color;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        > .container {
+            padding: 5px 0;
+            height: 60px;
+
+            @media (min-width: 768px){
+                max-width: 540px;
+            }
+
+            @media (min-width: 769px){
+                max-width: 720px;
+            }
+
+            @media (min-width: 992px){
+                max-width: 720px;
+            }
+
+            @media (min-width: 993px){
+                max-width: 960px;
+            }
+
+            @media (min-width: 1200px){
+                max-width: 960px;
+            }
+
+            @media (min-width: 1201px){
+                max-width: 1140px;
+            }
+
+            > .row {
+                align-items: baseline;
+                width: auto;
+                @media (max-width: 576px){
+                    position: static; //retira a dependência dos filhos
+                    width: 100%;
+                }
+                > .logo-container {
+                    @include make-col-ready();
+                    @include media-breakpoint-up(md){
+                        @include make-col(3);
+                        padding-left: 0;
+                        padding-right: 0; 
+                    }
+
+                    @media (max-width: 1200px){
+                        @include make-col(4);
+                    }
+
+                    @media (max-width: 992px){
+                        @include make-col(4);
+                    }
+
+                    @media (max-width: 768px){
+                        @include make-col(5);
+                        @include make-col-offset(4);
+                        align-self: stretch;
+                        margin-left: 25%;
+                    }
+
+                    @media (max-width: 576px){
+                        @include make-col(5);
+                        margin-left: 15%;
+                    }
+
+                    @media (max-width: 400px){
+                        @include make-col(5);
+                        margin-left: 10%;
+                    }
+
+                    @media (max-width: 360px){
+                        @include make-col(5);
+                        margin-left: 5%;
+                    }
+
+                    > .logo-container-adjust {
+                        @include make-col-ready();
+                        @include media-breakpoint-up(md){
+                            @include make-col(10);
+                            padding-left: 0;
+                            padding-right: 0; 
+                        }
+
+                        @media (max-width: 1200px){
+                            @include make-col(9);
+                        }
+
+                        @media (max-width: 992px){
+                            @include make-col(10);
+                            padding: 1px 0;
+                        }
+
+                        @media (max-width: 768px){
+                            padding: 3px 0;
+                        }
+
+                        @media (max-width: 576px){
+                            @include make-col(9);
+                        }
+                        > .logo {
+                            > .img-fluid {
+                                height: 45px;
+
+                                @media (max-width: 768px){
+                                    max-width: none;
+                                }
+                            }
+                        }
+  
+                    }
+                    
+                    > #logo a.logo {
+                        transition: opacity 650ms;
+                    }
+                    
+                    > #logo a.logo:hover {
+                        opacity: .8;
+                    }
+                }
+
+                > .burger {
+                    display: none;
+                    cursor: pointer;
+                    margin-left: 110px;
+                    margin-top: 12px;
+                    > div {
+                        width: 20px;
+                        height: 2px;
+                        margin: 5px;
+                        background-color: #fff;
+                        transition: all 0.3s;
+                    }
+
+                    @media (max-width: 768px){
+                        display: block;
+                        margin-left: 15%;
+                    }
+
+                    @media (max-width: 576px){
+                        margin-left: 20%;
+                    }
+
+                    @media (max-width: 320px){
+                        margin-left: 25%;
+                    }
+                }
+
+                > .links-container {
+                    @include make-col-ready();
+                    @include media-breakpoint-up(md){
+                        @include make-col(5);
+                        @include make-col-offset(4);
+                        padding: 11px 0;
+                        display: block;
+                    }
+
+                    @media (max-width: 1200px){
+                        @include make-col(6);
+                        @include make-col-offset(2);
+                        padding: 11px 0;
+                    }
+
+                    @media (max-width: 992px){
+                        @include make-col(8);
+                        @include make-col-offset(0);
+                        padding: 11px 0;
+                    }
+
+                    @media (max-width: 768px){
+                        @include make-col(12);
+                        @include make-col-offset(0);
+                        position: absolute;
+                        right: 0;
+                        top: 203px;
+                    }
+
+                    > ul {
+                        display: flex;
+                        padding: 0;
+                        margin: 0;
+                        width: 100%;
+                        justify-content: center;
+                        
+                        @media (max-width: 768px){
+                            position: absolute;
+                            right: 0;
+                            height: auto;
+                            background: $orange_pattern;
+                            top: -433px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            box-shadow: 0 0 5px $orange_pattern;
+                        }
+
+                        > li {
+                            list-style: none;
+
+                            @media (max-width: 768px){
+                                opacity: 0;
+                                width: 100%;
+                                text-align: center;
+                                &:hover{
+                                    background: $orange_select;
+                                }
+                            }
+                            > a {
+                                letter-spacing: 1px;
+                                padding: 0 10px;
+                                color: white;
+                                font: bold 11pt $font_main;
+                                text-decoration: none;
+
+                                @media (max-width: 768px){
+                                    display: block;
+                                    padding: 10px 10px;
+                                    border-bottom: 1px solid rgba(0,0,0,.2);
+                                }
+                            }
+
+                            > .line {
+                                display: none;
+                                width: auto;
+                                height: 3px;
+                                margin: 5px;
+                                background-color: $orange_pattern;
+                                transition: 0.5s;
+                            }
+
+                            > .dropdown-area {
+                                position: absolute;
+                                opacity: 0;
+                                pointer-events: none;
+                                width: 180px;
+                                top: 55px;
+                                left: 44%;
+                                transform: translate(-50%, - 50%);
+
+                                @media (max-width: 768px){
+                                    position: relative;
+                                    width: 100%;
+                                    top: 58px;
+                                    left: 50%;
+                                }
+
+                                > ul {
+                                    position: absolute;
+                                    padding: 0;
+                                    left: -3%;
+                                    width: 100%;
+                                    background: $orange_pattern;
+                                    box-shadow: 0 0 0.5px $heading_color;
+                                    transform-origin: top;
+                                    transform: perspective(1000px) rotateX(-90deg);
+                                    transition: 0.5s;
+
+                                    @media (max-width: 768px){
+                                        background: $orange_dark;
+                                        display: none;
+                                        transform: none;
+                                    }
+                                    > li {
+                                        list-style: none;
+                                        > a {
+                                            display: block;
+                                            letter-spacing: 1px;
+                                            padding: 10px 0px;
+                                            text-align: center;
+                                            color: white;
+                                            font: bold 11pt $font_main;
+                                            text-decoration: none;
+                                            border-top: 1px solid rgba(0,0,0,.2);
+                                            transition: 0.5s;
+                                            &:hover {
+                                                background: $orange_select;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                > .dropdown-active {
+                                    transform: perspective(1000px) rotateX(0deg);
+                                    @media (max-width: 768px){
+                                        display: block;
+                                        transform: none;
+                                        position: relative;
+                                        top: 0px;
+                                        left: 0;
+                                        box-shadow: none;
+                                    }
+                                }
+
+                                > .dropdown-active-ul {
+                                    transform: perspective(1000px) rotateX(0deg);
+                                    @media (max-width: 768px){
+                                        transform: none;
+                                        top: 70px;
+                                    }
+                                }
+                            }
+
+                            > .dropdown-display { //corrige bug que fazia dropdown abrir sem passar o mouse por "Serviços"
+                                opacity: 1;
+                                pointer-events: all;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+
+.toggleBar{
+    display: block !important;
+    transition: 0.5s;
+
+    @media (max-width: 768px){
+        display: none !important;
+    }
+}
+
+//For the small grid menu
+.toggle .line1 {
+    transform: rotate(45deg) translate(5px,5px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(-45deg) translate(5px,-5px);
+}
+
+.nav-active {
+    transform: translateY(290px);
+    //transition: transform 0.5s ease-in;
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,109 @@
+@import "vendors/bootstrap/scss/functions";
+@import "vendors/bootstrap/scss/variables";
+@import "vendors/bootstrap/scss/mixins";
+
+@media (max-width: 1200px){
+    body{
+        > header {
+            > .container {
+                > .row {
+                    > .logo-container {
+                        @include make-col(4);
+                        > .logo-container-adjust {
+                            @include make-col(9);
+                        }
+
+                        > .links-container {
+                            @include make-col(6);
+                            @include make-col-offset(2);
+                            padding: 11px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    body{
+        > header {
+            > .container {
+                > .row {
+                    > .logo-container {
+                        @include make-col(4);
+                        > .logo-container-adjust {
+                            @include make-col(10);
+                            padding: 3px 0;
+                        }
+                        > .links-container {
+                            @include make-col(8);
+                            @include make-col-offset(0);
+                            padding: 11px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        > header {
+            > .container {
+                > .row {
+                    > .logo-container {
+                        @include make-col(5);
+                        @include make-col-offset(4);
+                        > .links-container {
+                            @include make-col(8);
+                            @include make-col-offset(0);
+                            padding: 11px 0;
+                        }
+
+                        > .burger {
+                            > div {
+                                display: block;
+                            }
+                        }
+
+                        > .links-container {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    body{
+        > header {
+            > .container {
+                > .row {
+                    position: fixed;
+                    width: 500px;
+                    > .logo-container {
+                        @include make-col(5);
+                        > .logo-container-adjust {
+                            @include make-col(9);
+                            > .logo {
+                                > .img-fluid {
+                                    max-width: none;
+                                    width: 180px;
+                                }
+                            }
+                        }
+                        > .burger {
+                            > div {
+                                margin-left: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
