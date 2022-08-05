@@ -1,0 +1,17 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-logotipo-footer {
+    width: 311px;
+    height: 76px;
+    background-position: -5px -5px;
+}
+
+.sprite-logotipo-header {
+    width: 213px;
+    height: 52px;
+    background-position: -5px -91px;
+}

@@ -1,0 +1,23 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-missao-icon {
+    width: 161px;
+    height: 157px;
+    background-position: -5px -5px;
+}
+
+.sprite-valor-icon {
+    width: 170px;
+    height: 175px;
+    background-position: -5px -172px;
+}
+
+.sprite-visao-icon {
+    width: 171px;
+    height: 99px;
+    background-position: -5px -357px;
+}
